@@ -1,4 +1,4 @@
-# Deep learning for homogenization of two phase high contrast three-dimensional material 
+# A Deep Learning Model For Homogenization of Two-Phase High-Contrast Three-dimensional Materials
 
 This software is an deep learning application for modeling
 processing-structure-property (PSP) linkages for two phase high contrast
@@ -22,26 +22,26 @@ the materials system and predict its macroscale (effective) stiffness.
 * TensorFlow 1.1.0
 
 ## Files ##
-1. data.pkl: Pickle file. Example data of two-phase high contrast
+1. `data.pkl`: Pickle file. Example data of two-phase high contrast
    three-dimensional microstructure. It contains 20 MVEs and the dimension of
    each MVE is 51x51x51.
-2. label.pkl: Pickle file. Example data of two-phase high contrast
+2. `label.pkl`: Pickle file. Example data of two-phase high contrast
    three-dimensional microstructure. It contains the macroscale (effective)
-   stiffness of MVE in data.pkl file. 
-3. best_model.h5: HDF5 file. The best CNN model train in this work (see paper
+   stiffness of MVE in file`data.pkl`.
+3. `best_model.h5`: HDF5 file. The best CNN model train in this work (see paper
    in the related publication section). It contains the configuration and
    weights for the CNN.
-4. model.py: Use the best CNN model train in this work (see paper in the
+4. `model.py`: Use the best CNN model train in this work (see paper in the
    related publication section) to directly predict the macroscale (effective)
    stiffness of the microstructure. 
-5. train_model.py: The script to train CNN and its architecture is the same the
+5. `train_model.py`: The script to train CNN and its architecture is the same the
    best CNN train in this work (see paper in the related publication section).
    To get the best performance on new dataset, users might need to design
    customized architecture and tune the hyperparameters of CNN.
 
 ## How to run it
-1. To run model.py: 
-	1. Make sure the best_model.h5 in the same folder.
+1. To run `model.py`: 
+	1. Make sure the `best_model.h5` in the same folder.
 	2. The data file of microstructure should be named as `data.pkl`, which
 	   is a pickle file. The data should be a numpy array. The shape of
 	   bumpy array is (x, 51, 51, 51, 1) where x is the number of
@@ -50,7 +50,7 @@ the materials system and predict its macroscale (effective) stiffness.
 	3. To run this file, use commend `python model.py`
 	4. The predicted results will be save in a Pickle file, named
 	   `predict_result.pkl` in the same folder. 
-2. To run train_model.py: 
+2. To run `train_model.py`: 
 	1. The data file of microstructure should be named as `data.pkl`, which
 	   is a pickle file. The data should be a numpy array. The shape of
 	   bumpy array is (x, 51, 51, 51, 1) where x is the number of
@@ -66,16 +66,15 @@ the materials system and predict its macroscale (effective) stiffness.
 	   is [my_model.h5](http://cucis.ece.northwestern.edu/projects/DataSets/Deep_learning_homogenization/my_model.h5).
 
 ## Related Publications ##
-1. Z. Yang, Y. C. Yabansu, R. Al-Bahrani, W.-keng Liao, A. N. Choudhary, S. R.
-   Kalidindi, and A. Agrawal, "Deep learning approaches for mining
-   structure-property linkages in high contrast composites from simulation
-   datasets," Computational Materials Science, vol. 151, pp. 278-287,
-   2018.
+1. Z. Yang, Y. Yabansu, R. Al-Bahrani, W. Liao, A. Choudhary, S.  Kalidindi,
+   and A. Agrawal, "Deep Learning Approaches for Mining Structure-property
+   Linkages in High Contrast Composites From Simulation Datasets," in the
+   Computational Materials Science, vol. 151, pp. 278-287, 2018.
 
 ## Contact
-* Zijiang Yang (zijiangyang2016@u.northwestern.edu)
-* Ankit Agrawal (ankitag@eecs.northwestern.edu)
-* Alok Choudhary (choudhar@eecs.northwestern.edu)
+* Zijiang Yang (zyz293@ece.northwestern.edu)
+* Ankit Agrawal (ankitag@ece.northwestern.edu)
+* Alok Choudhary (choudhar@ece.northwestern.edu)
 
 ## Acknowledgement
 This work is supported in part by the following grants: AFOSR award
